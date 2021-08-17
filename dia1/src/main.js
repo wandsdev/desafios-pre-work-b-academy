@@ -7,7 +7,8 @@ document.querySelector('[data-js="app"]').innerHTML = `
 const app = document.querySelector('[data-js="app"]');
 const link = document.querySelector('[data-js="link"]');
 
-link.addEventListener('click', () => {
+link.addEventListener('click', (e) => {
+  e.preventDefault();
   if (app.style.display == 'none') {
     app.style.display = 'block';
   } else {
